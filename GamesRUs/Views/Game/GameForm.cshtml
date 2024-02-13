@@ -1,0 +1,40 @@
+﻿@model GamingStore.Models.Game
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>!!! Gaming Store Form !!!</title>
+    <link rel="stylesheet" href="/css/StyleSheet.css"/>
+</head>
+<body>
+    <form asp-action="GameForm" method="post">
+        <div asp-validation-summary="All"></div>
+        <h2>Enter Game Information to Be Added</h2>
+        <div>
+            <label asp-for="Title">Game Title:</label>
+            <input type="text" asp-for="Title"/>
+        </div>
+        <br />
+        <div>
+            <label asp-for="Description">Game Description:</label>
+            <input type="text" asp-for="Description" />
+        </div>
+        <br />
+        <div>
+            <label asp-for="Developer">Game Developer:</label>
+            <input type="text" asp-for="Developer" />
+        </div>
+        <br />
+        <div>
+            <label asp-for="Price">Game Price:</label>
+            <input type="text" asp-for="Price" />
+        </div>
+        <br />
+        <button type="submit">Add Game to List</button>
+    </form>
+</body>
+</html>

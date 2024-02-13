@@ -1,0 +1,30 @@
+﻿@model IEnumerable<GamingStore.Models.Game>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>!!! GAMES !!!</title>
+</head>
+<body>
+ 
+        @foreach (GamingStore.Models.Game r in Model)
+        {
+        <h4>Game Information:</h4>
+            <ul>
+                <li>Title: @r.Title</li>
+                <li>About: @r.Description</li>
+                <li>Developed By: @r.Developer</li>
+                <li>Price: $@r.Price</li>  
+            </ul>
+        <br />
+        }
+
+</body>
+<a asp-controller="Game" asp-action="GameForm">Add More Games</a>
+<br/>
+<a asp-controller="Home" asp-action="Index">Back</a>
+</html>
