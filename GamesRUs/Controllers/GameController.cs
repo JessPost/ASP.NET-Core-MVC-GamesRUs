@@ -1,6 +1,6 @@
 ﻿using GamingStore.Models;
 using Microsoft.AspNetCore.Mvc;
-
+//line 3
 namespace GamingStore.Controllers
 {
     public class GameController : Controller
